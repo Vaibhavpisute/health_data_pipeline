@@ -20,8 +20,6 @@ A comprehensive big data analytics solution for healthcare and insurance data pr
 - [Project Structure](#project-structure)
 - [Configuration](#configuration)
 - [Monitoring](#monitoring)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## 🔍 Overview
 
