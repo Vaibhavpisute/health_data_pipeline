@@ -116,51 +116,12 @@ git clone https://github.com/Vaibhavpisute/health_data_pipeline.git
 cd health_data_pipeline
 ```
 
-### 2. Set Up Python Environment
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
-```
 
-### 3. Configure AWS Credentials
+### 2. Configure AWS Credentials
 ```bash
 aws configure
 # Enter your AWS Access Key ID, Secret Access Key, Region, and Output format
 ```
-
-### 4. Set Up Environment Variables
-```bash
-cp .env.example .env
-# Edit .env file with your configuration values
-```
-
-### 5. Initialize Airflow
-```bash
-airflow db init
-airflow users create \
-    --username admin \
-    --firstname Admin \
-    --lastname User \
-    --role Admin \
-    --email admin@example.com
-```
-
-## 💻 Usage
-
-### Starting the Pipeline
-
-1. **Start Airflow Services**
-```bash
-# Start the web server (default port 8080)
-airflow webserver --port 8080
-
-# In another terminal, start the scheduler
-airflow scheduler
-```
-
-2. **Access Airflow UI**
-Navigate to `http://localhost:8080` and log in with your admin credentials.
 
 3. **Trigger Data Pipeline**
 ```bash
@@ -169,19 +130,6 @@ airflow dags trigger health_data_etl_pipeline
 
 # Or trigger via Python script
 python scripts/trigger_pipeline.py
-```
-
-### Running Individual Components
-
-```bash
-# Run data ingestion
-python src/ingestion/data_ingestion.py
-
-# Run data transformation
-python src/transformation/data_transformation.py
-
-# Run fraud detection analysis
-python src/analytics/fraud_detection.py
 ```
 
 ## 🔄 Data Pipeline Flow
